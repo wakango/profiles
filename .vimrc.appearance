@@ -1,19 +1,53 @@
-set scrolloff=5                  " スクロール時の余白確保
-set textwidth=0                  " 一行に長い文章を書いていても自動折り返しをしない
-set nobackup                     " バックアップ取らない
-set noswapfile                   " スワップファイル作らない
-set autoread                     " 他で書き換えられたら自動で読み直す
-"set hidden                       " 編集中でも他のファイルを開けるようにする
-set backspace=indent,eol,start   " バックスペースでなんでも消せるように
-set formatoptions=lmoq           " テキスト整形オプション，マルチバイト系を追加
-set vb t_vb=                     " ビープをならさない
-"set browsedir=buffer             " Exploreの初期ディレクトリ
-set whichwrap=b,s,h,l,<,>,[,]    " カーソルを行頭、行末で止まらないようにする
-"set showcmd                      " コマンドをステータス行に表示
-"set showmode                     " 現在のモードを表示
-set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
-set modelines=0                  " モードラインは無効
-
-filetype plugin on 
+" ===== basic =====
 set number
+" スクロール時の余白確保
+set scrolloff=5
+" 一行に長い文章を書いていても自動折り返しをしない
+set textwidth=0
+
+"set hidden " 編集中でも他のファイルを開けるようにする
+"set showcmd " コマンドをステータス行に表示
+"set browsedir=buffer " Exploreの初期ディレクトリ
+"set showmode " 現在のモードを表示
+
+" ===== status line =====
+set laststatus=2 " 常にステータスラインを表示
+
+" ===== quick fix =====
+" 自動的に QuickFix リストを表示する
+autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
+autocmd QuickfixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
+
+" ===== colors =====
 colorscheme molokai
+" ハイライト on
+syntax enable
+syntax on
+
+" ターミナルタイプによるカラー設定
+if &term =~ "xterm-256color" || "screen-256color"
+  " 256色
+  set t_Co=256
+  set t_Sf=<1b>[3%dm
+  set t_Sb=<1b>[4%dm
+elseif &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
+  set t_Co=16
+  set t_Sf=<1b>[3%dm
+  set t_Sb=<1b>[4%dm
+elseif &term =~ "xterm-color"
+  set t_Co=8
+  set t_Sf=<1b>[3%dm
+  set t_Sb=<1b>[4%dm
+elseif &term =~ "cygwin"
+  set t_Co=8
+  set t_Sf=<1b>[3%dm
+  set t_Sb=<1b>[4%dm
+endif
+
+" 補完候補の色づけ
+hi Visual ctermbg=243
+hi Pmenu ctermbg=80 ctermfg=0 guifg=#000000 guibg=#999999
+hi PmenuSel cterm=reverse ctermfg=33 ctermbg=255 gui=reverse guifg=#3399ff guibg=#f0e68c
+"hi Normal ctermfg=252 ctermbg=234
+"hi PmenuSbar ctermbg=0 ctermfg=9
+"hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
