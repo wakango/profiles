@@ -1,5 +1,5 @@
-source ~/dotfiles/.vimrc.bundle
-source ~/dotfiles/.vimrc.basic
-source ~/dotfiles/.vimrc.appearance
-source ~/dotfiles/.vimrc.filetype
-source ~/dotfiles/.vimrc.plugin_setting
+source ~/profiles/.vimrc.bundle
+source ~/profiles/.vimrc.basic
+source ~/profiles/.vimrc.appearance
+source ~/profiles/.vimrc.filetype
+source ~/profiles/.vimrc.plugin_setting
