@@ -1,3 +1,4 @@
+" ===== unite =====
 " The prefix key.
 nnoremap [unite] <Nop>
 nmap ; [unite]
@@ -19,6 +20,7 @@ noremap <silent> [unite]nd :<C-u>UniteWithBufferDir file file/new -buffer-name=f
 noremap <silent> [unite]nf :<C-u>Unite file file/new -buffer-name=file<CR>
 
 let g:yankring_zap_keys = ""
+
 " from basyura/unite-rails
 " nnoremap <silent> [unite]rm  :<C-u>Unite -no-split rails/model<CR>
 " nnoremap <silent> [unite]rc  :<C-u>Unite -no-split rails/controller<CR>
@@ -47,7 +49,7 @@ function! s:unite_my_settings()
   " ウィンドウを縦に分割して開く
   nnoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
   inoremap <silent> <buffer> <expr> <C-t> unite#do_action('tabopen')
-endfunction "}}}
+endfunction
 
 let g:unite_source_file_mru_limit = 200
 
@@ -57,3 +59,6 @@ nnoremap <silent> [unite]h :<C-u>Unite help<CR>
 nnoremap <C-o> :<C-u>Unite outline<CR>
 nnoremap / :<C-u>Unite line<CR>
 
+" 検索時に ignore_case にする
+call unite#custom#profile('source/buffer', 'ignorecase', 1)
+call unite#custom#profile('line', 'ignorecase', 1)
