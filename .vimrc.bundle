@@ -23,6 +23,7 @@ NeoBundle 'endel/actionscript.vim'
 
 " ===== utils =====
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'sudo.vim'
 
 " ===== unite =====
 NeoBundle 'Shougo/unite.vim'
