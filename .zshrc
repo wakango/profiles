@@ -14,10 +14,10 @@ PROMPT2='> '
     # http://curiousabt.blog27.fc2.com/blog-entry-65.html
     export LANG=ja_JP.UTF-8
     export LESSCHARSET=utf-8
-    
+
     # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
     setopt prompt_subst
-    
+
     ### 移動 ###
     # つまりディレクトリ名でcd
     setopt auto_cd
@@ -76,7 +76,7 @@ PROMPT2='> '
     bindkey "^n" history-beginning-search-forward-end
     bindkey "\\ep" history-beginning-search-backward-end
     bindkey "\\en" history-beginning-search-forward-end
-    
+
     # glob(*)によるインクリメンタルサーチ
     bindkey '^R' history-incremental-pattern-search-backward
     bindkey '^S' history-incremental-pattern-search-forward
@@ -87,7 +87,7 @@ PROMPT2='> '
     # ctrl-h, ctrl-lキーで単語移動
     #bindkey "^h" backward-char
     #bindkey "^l" forward-char
-    
+
 ### Command history configuration ###
     HISTFILE=~/.zsh_history
     HISTSIZE=10000
