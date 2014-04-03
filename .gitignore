@@ -16,9 +16,6 @@ Session.vim
 *.aux
 *.elc
 *.tags
-.zshrc.local
-samples
 
 .vim/bundle/
 .vim/.netrwhist
-.vimrc_sample

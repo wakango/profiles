@@ -29,6 +29,9 @@ NeoBundle 't9md/vim-quickhl'
 " ===== completion =====
 NeoBundle 'Shougo/neocomplete.vim'
 
+" ===== search =====
+NeoBundle 'wincent/Command-T'
+
 " ===== unite =====
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
