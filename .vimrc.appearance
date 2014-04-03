@@ -5,6 +5,9 @@ set scrolloff=5
 " 一行に長い文章を書いていても自動折り返しをしない
 set textwidth=0
 
+" ハイライト
+set hlsearch
+
 "set hidden " 編集中でも他のファイルを開けるようにする
 "set showcmd " コマンドをステータス行に表示
 "set browsedir=buffer " Exploreの初期ディレクトリ
