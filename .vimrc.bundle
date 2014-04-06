@@ -29,6 +29,10 @@ NeoBundle 't9md/vim-quickhl'
 " ===== completion =====
 NeoBundle 'Shougo/neocomplete.vim'
 
+" ===== snippet =====
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
 " ===== search =====
 NeoBundle 'wincent/Command-T'
 
