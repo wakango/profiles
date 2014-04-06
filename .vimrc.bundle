@@ -27,6 +27,9 @@ NeoBundle 'sudo.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'thinca/vim-ref'
 
+" ===== run utils =====
+NeoBundle 'thinca/vim-quickrun'
+
 " ===== completion =====
 NeoBundle 'Shougo/neocomplete.vim'
 
