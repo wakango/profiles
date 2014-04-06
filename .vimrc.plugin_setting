@@ -1,4 +1,3 @@
-" ===== unite =====
 source ~/profiles/.vimrc.plugin_settings/.vimrc.unite
 source ~/profiles/.vimrc.plugin_settings/.vimrc.neocomplete
 source ~/profiles/.vimrc.plugin_settings/.vimrc.neosnippet
