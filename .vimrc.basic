@@ -19,5 +19,7 @@ set viminfo='50,<1000,s100,\"50
 set modelines=0
 " <Esc><Esc> でハイライトしない
 nnoremap <silent><Esc><Esc> :nohlsearch<CR>
+" grep の設定
+set grepprg=grep\ -nH
 
 filetype plugin on 
