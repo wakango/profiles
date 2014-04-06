@@ -25,6 +25,7 @@ NeoBundle 'endel/actionscript.vim'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'sudo.vim'
 NeoBundle 't9md/vim-quickhl'
+NeoBundle 'thinca/vim-ref'
 
 " ===== completion =====
 NeoBundle 'Shougo/neocomplete.vim'
