@@ -23,10 +23,26 @@ NeoBundle 'endel/actionscript.vim'
 
 " ===== utils =====
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'sudo.vim'
+NeoBundle 't9md/vim-quickhl'
+NeoBundle 'thinca/vim-ref'
+
+" ===== run utils =====
+NeoBundle 'thinca/vim-quickrun'
+
+" ===== completion =====
+NeoBundle 'Shougo/neocomplete.vim'
+
+" ===== snippet =====
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+" ===== search =====
+NeoBundle 'wincent/Command-T'
 
 " ===== unite =====
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-outline'
 "NeoBundle 'tsukkee/unite-tag'
 "NeoBundle 'tsukkee/unite-help'
 "NeoBundle 'choplin/unite-vim_hacks'
