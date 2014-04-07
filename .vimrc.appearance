@@ -19,7 +19,6 @@ autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
 autocmd QuickfixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
 
 " ===== colors =====
-colorscheme molokai
 " ハイライト on
 syntax enable
 syntax on
@@ -30,6 +29,7 @@ if &term =~ "xterm-256color" || "screen-256color"
   set t_Co=256
   set t_Sf=<1b>[3%dm
   set t_Sb=<1b>[4%dm
+  colorscheme molokai
 elseif &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
   set t_Co=16
   set t_Sf=<1b>[3%dm

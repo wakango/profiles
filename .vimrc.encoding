@@ -1,0 +1,5 @@
+if has('gui_running') && !has('unix')
+	set encoding=utf-8
+endif
+"set fileencodings=utf-8,cp932,euc-jp
+set fileencodings=ucs-bom,utf-8,euc-jp,iso-2022-jp,cp932,utf-16,utf-16le
