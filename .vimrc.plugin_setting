@@ -2,3 +2,4 @@ source ~/profiles/.vimrc.plugin_settings/.vimrc.unite
 source ~/profiles/.vimrc.plugin_settings/.vimrc.neocomplete
 source ~/profiles/.vimrc.plugin_settings/.vimrc.neosnippet
 source ~/profiles/.vimrc.plugin_settings/.vimrc.quickrun
+source ~/profiles/.vimrc.plugin_settings/.vimrc.vim-marching

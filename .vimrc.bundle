@@ -52,7 +52,7 @@ NeoBundleLazy 'wincent/Command-T', {
       \  }
       \}
 nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+" nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 " ===== rails =====
 NeoBundleLazy 'tpope/vim-rails', {
@@ -61,6 +61,12 @@ NeoBundleLazy 'tpope/vim-rails', {
 NeoBundleLazy 'basyura/unite-rails', {
       \ 'depends' : ['Shougo/unite.vim'],
       \ 'autoload' : {'filetypes': ['ruby', 'eruby', 'haml']}
+      \}
+
+" ===== c/c++ =====
+NeoBundleLazy 'osyo-manga/vim-marching', {
+      \  'depends': ['Shougo/neocomplete.vim', 'Shougo/vimproc', 'osyo-manga/vim-reunions'],
+      \  'autoload': {'filetypes': ['c', 'cpp']}
       \}
 
 " ===== unite =====
