@@ -29,6 +29,14 @@ NeoBundle 'thinca/vim-ref'
 
 " ===== run utils =====
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 " ===== completion =====
 NeoBundle 'Shougo/neocomplete.vim'
@@ -45,14 +53,18 @@ NeoBundleLazy 'tpope/vim-rails', {
       \ 'autoload' : {'filetypes': ['ruby', 'eruby', 'haml']},
       \}
 NeoBundleLazy 'basyura/unite-rails', {
-      \ 'autoload' : {'filetypes': ['ruby', 'eruby', 'haml']},
-      \ 'depends' : 'Shougo/unite.vim'
+      \ 'depends' : ['Shougo/unite.vim'],
+      \ 'autoload' : {'filetypes': ['ruby', 'eruby', 'haml']}
       \}
 
 " ===== unite =====
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline', {
-      \ 'depends': 'Shougo/unite.vim'
+NeoBundleLazy 'Shougo/unite.vim', {
+      \  'autoload': {
+      \    'commands': ["Unite", "UniteWithBufferDir", "UniteWithCurrentDir"]
+      \  }
+      \}
+NeoBundleLazy 'Shougo/unite-outline', {
+      \ 'depends': ['Shougo/unite.vim']
       \}
 "NeoBundle 'tsukkee/unite-tag'
 "NeoBundle 'tsukkee/unite-help'
