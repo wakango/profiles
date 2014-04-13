@@ -46,7 +46,13 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 
 " ===== search =====
-NeoBundle 'wincent/Command-T'
+NeoBundleLazy 'wincent/Command-T', {
+      \  'autoload': {
+      \    'commands': ["CommandT", "CommandTBuffer"]
+      \  }
+      \}
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 " ===== rails =====
 NeoBundleLazy 'tpope/vim-rails', {
