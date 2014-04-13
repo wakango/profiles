@@ -19,7 +19,9 @@ NeoBundleCheck
 NeoBundle 'tomasr/molokai'
 
 " ===== syntax =====
-NeoBundle 'endel/actionscript.vim'
+NeoBundleLazy 'endel/actionscript.vim', {
+      \  'autoload': {'filetypes': ['actionscript']}
+      \}
 
 " ===== utils =====
 NeoBundle 'Lokaltog/vim-powerline'
