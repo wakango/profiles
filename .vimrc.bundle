@@ -76,6 +76,11 @@ NeoBundleLazy 'evidens/vim-twig', {
       \ 'autoload': {'filetypes': ['twig']}
       \}
 
+" ===== coffee =====
+NeoBundleLazy 'kchmck/vim-coffee-script', {
+      \ 'autoload': {'filetypes': ['coffee']}
+      \ }
+
 " ===== unite =====
 NeoBundleLazy 'Shougo/unite.vim', {
       \  'autoload': {
