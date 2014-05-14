@@ -75,6 +75,16 @@ NeoBundleLazy 'osyo-manga/vim-marching', {
       \  'autoload': {'filetypes': ['c', 'cpp']}
       \}
 
+" ===== twig =====
+NeoBundleLazy 'evidens/vim-twig', {
+      \ 'autoload': {'filetypes': ['twig']}
+      \}
+
+" ===== coffee =====
+NeoBundleLazy 'kchmck/vim-coffee-script', {
+      \ 'autoload': {'filetypes': ['coffee']}
+      \ }
+
 " ===== unite =====
 NeoBundleLazy 'Shougo/unite.vim', {
       \  'autoload': {
