@@ -28,6 +28,8 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'sudo.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'camelcasemotion'
+NeoBundle "scrooloose/syntastic"
 
 " ===== run utils =====
 NeoBundle 'thinca/vim-quickrun'
@@ -88,13 +90,15 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {
 " ===== unite =====
 NeoBundleLazy 'Shougo/unite.vim', {
       \  'autoload': {
-      \    'commands': ["Unite", "UniteWithBufferDir", "UniteWithCurrentDir"]
+      \    'commands': ["Unite", "UniteWithBufferDir", "UniteWithCurrentDir", "UniteWithCursorWord"]
       \  }
       \}
 NeoBundleLazy 'Shougo/unite-outline', {
       \ 'depends': ['Shougo/unite.vim']
       \}
-"NeoBundle 'tsukkee/unite-tag'
+NeoBundleLazy 'tsukkee/unite-tag', {
+      \ 'depends': ['Shougo/unite.vim']
+      \}
 "NeoBundle 'tsukkee/unite-help'
 "NeoBundle 'choplin/unite-vim_hacks'
 "NeoBundle 'Sixeight/unite-grep'

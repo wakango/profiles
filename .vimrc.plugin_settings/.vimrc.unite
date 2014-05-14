@@ -30,6 +30,8 @@ nnoremap <silent> [unite]rl  :<C-u>Unite -no-split rails/lib<CR>
 nnoremap <silent> [unite]rj  :<C-u>Unite -no-split rails/javascript<CR>
 nnoremap <silent> [unite]rs  :<C-u>Unite -no-split rails/spec<CR>
 nnoremap <silent> [unite]rh  :<C-u>Unite -no-split rails/helper<CR>
+" unite-tag
+nnoremap <silent> [unite]<C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
 
 
 " unite.vim 読み込み後有効になる設定

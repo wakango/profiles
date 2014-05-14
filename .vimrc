@@ -5,3 +5,4 @@ source ~/profiles/.vimrc.basic
 source ~/profiles/.vimrc.appearance
 source ~/profiles/.vimrc.plugin_setting
 source ~/profiles/.vimrc.indent
+source ~/profiles/.vimrc.tags
