@@ -41,7 +41,11 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 " ===== completion =====
-NeoBundle 'Shougo/neocomplete.vim'
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+else
+  NeoBundle 'Shougo/neocomplcache.vim'
+endif
 
 " ===== snippet =====
 NeoBundle 'Shougo/neosnippet.vim'
