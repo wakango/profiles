@@ -1,0 +1,4 @@
+" tag 読み込み関係
+" set tags=./tags,'./.tags'
+autocmd FileType ruby,eruby,noeruby set tags+=$HOME/tags/gtags,$HOME/tags/rtags
+command! TT !ctags --languages=PHP --php-types=c+f+i+d -f ./.tags -a %

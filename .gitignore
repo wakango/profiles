@@ -15,7 +15,6 @@ Session.vim
 *.dvi
 *.aux
 *.elc
-*.tags
 tags
 
 .vim/bundle/
