@@ -87,6 +87,11 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {
       \ 'autoload': {'filetypes': ['coffee']}
       \ }
 
+" ===== scala =====
+NeoBundleLazy 'derekwyatt/vim-scala', {
+      \ 'autoload': {'filetypes': ['scala']}
+      \ }
+
 " ===== unite =====
 NeoBundleLazy 'Shougo/unite.vim', {
       \  'autoload': {
