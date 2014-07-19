@@ -54,7 +54,7 @@ PROMPT2='> '
     # sudoも補完の対象
     zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
     # 色付きで補完する
-    zstyle ':completion:*' list-colors di=34 fi=0
+    zstyle ':completion:*' list-colors 'di=32' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
     #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
     # 最後がディレクトリ名で終わっている場合末尾の / を自動的に取り除かない
     #setopt noautoremoveslash
@@ -82,8 +82,8 @@ PROMPT2='> '
     bindkey '^S' history-incremental-pattern-search-forward
 
     # ctrl-w, ctrl-bキーで単語移動
-    bindkey "^W" forward-word
-    bindkey "^B" backward-word
+    #bindkey "^W" forward-word
+    #bindkey "^B" backward-word
     # ctrl-h, ctrl-lキーで単語移動
     #bindkey "^h" backward-char
     #bindkey "^l" forward-char
@@ -201,18 +201,44 @@ function cwaf() {
         esac
         ;;
     esac
-    [ -f ~/profiles/.zshrc.alias ] && source ~/profiles/.zshrc.alias
-    
-    case "${OSTYPE}" in
-    # Mac(Unix)
-    darwin*)
-        [ -f ~/profiles/.zshrc.osx ] && source ~/profiles/.zshrc.osx
-        ;;
-    # Linux
-    linux*)
-        [ -f ~/profiles/.zshrc.linux ] && source ~/profiles/.zshrc.linux
-        ;;
+    # ls color
+    case $OSTYPE in
+        freebsd*|darwin*)
+            alias ls="ls -G -w"
+            ;;
+        linux*)
+            alias ls="ls --color"
+            ;;
     esac
+    case $TERM in
+        xterm*)
+            export LSCOLORS=cxFxCxdxBxegedabagacad
+            export LS_COLORS='di=32:ln=35:so=01:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+            ;;
+        kterm-color)
+            stty erase '^H'
+            export LSCOLORS=cxFxCxdxBxegedabagacad
+            export LS_COLORS='di=32:ln=35:so=01:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+            ;;
+        kterm)
+            stty erase '^H'
+            ;;
+        cons25)
+            unset LANG
+            export LSCOLORS=cxFxCxdxBxegedabagacad
+            export LS_COLORS='di=01;32:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+            ;;
+        jfbterm-color)
+            export LSCOLORS=cxFxCxdxBxegedabagacad
+            export LS_COLORS='di=01;32:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+            ;;
+        *)
+            export LSCOLORS=cxFxCxdxBxegedabagacad
+            export LS_COLORS='di=32:ln=35:so=01:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+            ;;
+    esac
+    [ -f ~/profiles/.zshrc.alias ] && source ~/profiles/.zshrc.alias
+
     
 ### terminal configuration ###
     export EDITOR=vim
