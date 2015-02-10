@@ -89,6 +89,11 @@ NeoBundleLazy 'derekwyatt/vim-scala', {
       \ 'autoload': {'filetypes': ['scala']}
       \ }
 
+" ===== haskell =====
+NeoBundleLazy 'kana/vim-filetype-haskell', {
+      \ 'autoload': {'filetypes': ['haskell']}
+      \ }
+
 " ===== unite =====
 NeoBundleLazy 'Shougo/unite.vim', {
       \  'autoload': {
